@@ -9,7 +9,7 @@ This is just the package, no options or anything.
 ### 1. Add the flake input
 
 ```nix
-inputs.eden-flake.url = "github:ardishko/fluxer-nix";
+inputs.fluxer-nix.url = "github:ardishko/fluxer-nix";
 ```
 
 ### 2. Install the package
