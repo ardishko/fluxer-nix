@@ -122,7 +122,7 @@ stdenv.mkDerivation rec {
     --add-flags "$out/share/fluxer/app.asar"
 
     mkdir -p $out/share/applications/
-    substitute ${writeText "fluxer.desktop" ''
+    substitute ${writeText "fluxer_desktop.desktop" ''
       [Desktop Entry]
       Name=Fluxer
       Comment=OSS messaging platform
@@ -132,7 +132,7 @@ stdenv.mkDerivation rec {
       Type=Application
       StartupNotify=true
       StartupWMClass=fluxer_desktop
-    ''} $out/share/applications/fluxer.desktop --subst-var out
+    ''} $out/share/applications/fluxer_desktop.desktop --subst-var out
 
     mkdir -p $out/share/icons/hicolor/512x512/apps
     cp build_resources/icons-stable/512x512.png $out/share/icons/hicolor/512x512/apps/fluxer.png
