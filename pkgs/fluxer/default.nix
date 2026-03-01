@@ -131,7 +131,7 @@ stdenv.mkDerivation rec {
       Terminal=false
       Type=Application
       StartupNotify=true
-      StartupWMClass=fluxer
+      StartupWMClass=fluxer_desktop
     ''} $out/share/applications/fluxer.desktop --subst-var out
 
     mkdir -p $out/share/icons/hicolor/512x512/apps
