@@ -127,7 +127,7 @@ stdenv.mkDerivation rec {
       Name=Fluxer
       Comment=OSS messaging platform
       Exec=@out@/bin/fluxer
-      Icon=fluxer
+      Icon=fluxer_desktop
       Terminal=false
       Type=Application
       StartupNotify=true
@@ -135,6 +135,6 @@ stdenv.mkDerivation rec {
     ''} $out/share/applications/fluxer_desktop.desktop --subst-var out
 
     mkdir -p $out/share/icons/hicolor/512x512/apps
-    cp build_resources/icons-stable/512x512.png $out/share/icons/hicolor/512x512/apps/fluxer.png
+    cp build_resources/icons-stable/512x512.png $out/share/icons/hicolor/512x512/apps/fluxer_desktop.png
   '';
 }
