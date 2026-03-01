@@ -135,6 +135,11 @@ stdenv.mkDerivation rec {
     ''} $out/share/applications/fluxer_desktop.desktop --subst-var out
 
     mkdir -p $out/share/icons/hicolor/scalable/apps
-    cp fluxer_app/src/images/fluxer-logo-color.svg $out/share/icons/hicolor/scalable/apps/fluxer_desktop.svg
+    cp ${fetchFromGitHub {
+      owner = "fluxerapp";
+      repo = "fluxer";
+      rev = "77a6897180750801cc020262c94878736ff79799";
+      sha256 = "sha256-zcUpKR5sCO4R9zgwvlZrNzfrgFHl3nwEqQclM2YCnrk=";
+    }}/fluxer_app/src/images/fluxer-logo-color.svg $out/share/icons/hicolor/scalable/apps/fluxer_desktop.svg
   '';
 }
