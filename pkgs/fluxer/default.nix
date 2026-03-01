@@ -134,7 +134,7 @@ stdenv.mkDerivation rec {
       StartupWMClass=fluxer_desktop
     ''} $out/share/applications/fluxer_desktop.desktop --subst-var out
 
-    mkdir -p $out/share/icons/hicolor/512x512/apps
-    cp build_resources/icons-stable/512x512.png $out/share/icons/hicolor/512x512/apps/fluxer_desktop.png
+    mkdir -p $out/share/icons/hicolor/scalable/apps
+    cp fluxer_app/src/images/fluxer-logo-color.svg $out/share/icons/hicolor/scalable/apps/fluxer_desktop.svg
   '';
 }
