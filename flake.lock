@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "fluxer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1770835432,
+        "narHash": "sha256-WkVGpoFxqNYWg0TUWMOxTtk8URjQvTr25DWDEMwB/lY=",
+        "owner": "fluxerapp",
+        "repo": "fluxer",
+        "rev": "aa4e5b0385534dc443c92418b96fe9988a441d69",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fluxerapp",
+        "ref": "main",
+        "repo": "fluxer",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1772433332,
+        "narHash": "sha256-izhTDFKsg6KeVBxJS9EblGeQ8y+O8eCa6RcW874vxEc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "cf59864ef8aa2e178cccedbe2c178185b0365705",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "fluxer-src": "fluxer-src",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
