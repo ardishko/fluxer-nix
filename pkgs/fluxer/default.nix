@@ -37,19 +37,19 @@
   esbuild,
   fetchFromGitHub,
   ...
-}:
-stdenv.mkDerivation rec {
-  pname = "fluxer";
-  version = "1.0.0-canary";
-
-  src = "${
-    fetchFromGitHub {
+}: let 
+  githubSource = fetchFromGitHub {
       owner = "fluxerapp";
       repo = "fluxer";
       rev = "77a6897180750801cc020262c94878736ff79799";
       sha256 = "sha256-zcUpKR5sCO4R9zgwvlZrNzfrgFHl3nwEqQclM2YCnrk=";
-    }
-  }/fluxer_desktop";
+    };
+in
+stdenv.mkDerivation rec {
+  pname = "fluxer";
+  version = "1.0.0-canary";
+
+  src = "${githubSource}/fluxer_desktop";
 
   patches = [./refactor.patch];
 
@@ -135,11 +135,6 @@ stdenv.mkDerivation rec {
     ''} $out/share/applications/fluxer_desktop.desktop --subst-var out
 
     mkdir -p $out/share/icons/hicolor/scalable/apps
-    cp ${fetchFromGitHub {
-      owner = "fluxerapp";
-      repo = "fluxer";
-      rev = "77a6897180750801cc020262c94878736ff79799";
-      sha256 = "sha256-zcUpKR5sCO4R9zgwvlZrNzfrgFHl3nwEqQclM2YCnrk=";
-    }}/fluxer_app/src/images/fluxer-logo-color.svg $out/share/icons/hicolor/scalable/apps/fluxer_desktop.svg
+    cp ${githubSource}/fluxer_app/src/images/fluxer-logo-color.svg $out/share/icons/hicolor/scalable/apps/fluxer_desktop.svg
   '';
 }
