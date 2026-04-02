@@ -12,8 +12,7 @@ jobs:
 
       - uses: cachix/install-nix-action@v31
 
-      - run:
-          nix build .#packages.x86_64-linux.fluxer 
+      - run: nix build .#packages.x86_64-linux.fluxer
   auto-merge:
     needs: [check-x86-linux]
     runs-on: ubuntu-latest
@@ -27,4 +26,4 @@ jobs:
         run: gh pr merge --auto --squash "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
