@@ -3,11 +3,11 @@
     "fluxer-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1773940207,
-        "narHash": "sha256-L5EmJH7wlZi1hG6dhf8ohI+L6jcIcbnbxlt8b2bAEfA=",
+        "lastModified": 1775750396,
+        "narHash": "sha256-94rLtgG5s/aJfNL2v/KTqLOnGsT05Qy6l3jPuL15SkE=",
         "owner": "fluxerapp",
         "repo": "fluxer",
-        "rev": "5da26d4ed5ef9f3fe8bef993c0f10ea4f4ee9c1d",
+        "rev": "ee1f27fe1a372b5291aead8042944afd706bf5db",
         "type": "github"
       },
       "original": {
